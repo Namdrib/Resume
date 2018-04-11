@@ -9,29 +9,11 @@
 \usepackage{relsize}
 \usepackage{lipsum}
 \usepackage[letterpaper,margin=1.0cm]{geometry}
-%\addtolength{\oddsidemargin}{-3cm}
-%\addtolength{\evensidemargin}{-3cm}
-%\addtolength{\textwidth}{5.75cm}
-%\addtolength{\topmargin}{-1cm}
-%\addtolength{\textheight}{5.75cm}
 
 % Table stuff
 \usepackage{multirow}
 \usepackage{tabu}
-\usepackage{booktabs}% for better rules in the table
 
-% Filler text generator
-\usepackage[english]{babel}
-\usepackage{blindtext}
-
-\usepackage{hyperref}
-
-% Set this to toggle the table outlines
-% http://tex.stackexchange.com/questions/5894/latex-conditional-expression#5896
-\usepackage{etoolbox}
-\newtoggle{outline}
-\toggletrue{outline}
-\togglefalse{outline} % COMMENT THIS TO KEEP OUTLINES
 
 % Definitions
 %c from texinfo.tex
@@ -53,40 +35,36 @@
 
 \begin{document}
 % Title information (name, date, etc. )
-	\begin{center} % "Header" content (contact details)
-		{\LARGE \textbf{Denton Phosavanh}}
+	\centering % "Header" content (contact details)
+	{\LARGE \textbf{Denton Phosavanh}}
 
-		+61 429 263 306\ \ \textbullet\ \ dphosavanhau@gmail.com\ \ \textbullet\ \ generated \today
+	+61 429 263 306\ \ \textbullet\ \ dphosavanhau@gmail.com\ \ \textbullet\ \ generated \today
 
-		linkedin.com/in/denton-phosavanh\ \ \textbullet\ \ github.com/Namdrib
-	\end{center}
+	linkedin.com/in/denton-phosavanh\ \ \textbullet\ \ github.com/Namdrib
 	\hrule
+	\vspace{10px}
 
-	% Possible insert like a blurb or something in here
+	% Possibly insert like a blurb or something in here
 
-	\begin{center}
-	\iftoggle{outline}{
-		\begin{tabu}{ | l | l | }
-	}{
-		\begin{tabu} to \textwidth{p{0.2\linewidth}p{0.8\linewidth}}
-	}
+	\centering
+	\begin{tabu} to \textwidth{p{0.2\linewidth}p{0.8\linewidth}}
 		% Section 0: Work experience
 		\rowfont{\bfseries\large} Work Experience & Description \hfill Date(s) \\
 		Casual teaching at the University of Adelaide & Supervise practical/workshops sessions of comp-sci courses \hfill [Jul 2017 - Nov 2017] \\
 
-		\iftoggle{outline}{\hline}{ & \\}
+		& \\
 		% Section 1: Formal education
 		\rowfont{\bfseries\large} Education & BEng. (Software) (Hon.) \hfill [Mar 2015 - Nov 2018] (exp) \\
-		\iftoggle{outline}{\hline}{ & \\}
-
+		
+		& \\
 		% Section 1.1: Summary info of degree
 		& The University of Adelaide, Australia \hfill GPA: 5.833 / 7 \\
 		& Expected Graduation: Nov 2018 \\
-		\iftoggle{outline}{\hline}{ & \\}
 
+		& \\
 		% Section 2: Informal? education and other stuff
 		% Section 2.1: Personal projects
-		\multirow{\iftoggle{outline}{3}{1}}{*}{\textbf{Personal Projects}}
+		\multirow{1}{*}{\textbf{Personal Projects}}
 		& \textbf{Tic-Tac-Toe solver} (Java) \hfill [Jan 2018 - Ongoing] \\
 		& - 3 computer types: random, minimax, alpha-beta \\
 		& - Human can play against human or computer in CLI \\
@@ -113,9 +91,8 @@
 		& - A Discord bot to allow users to manage their "roles" more easily \\
 		& - Uses the JDA wrapper for the Discord API \\
 		& - Deployed on Heroku \\
-		& \\	
-		\iftoggle{outline}{\hline}{ & \\}
 
+		& \\
 		% Section 2.3: Extracurricular activities
 		\textbf{Extracurricular} % The "Category" of this section
 		% Separated from ^ for modularity.
@@ -123,7 +100,6 @@
 %		& - Largely self-taught \\
 %		& - Develop self- and spatial-awareness \\
 %		& - Mindful and respectful of surroundings \\
-%		\iftoggle{outline}{\hline}{ & \\}
 		& \textbf{Programming skills practice (Language(s))} \\
 		& - Project Euler (\C++, Java, Python) \hfill [2016 - Present] \\
 		& $\;\;$ - A collection of mathematical problems made easier with computation \\
@@ -132,36 +108,35 @@
 		& - ACM ICPC Practice Rounds (ANZAC) (\C++) \hfill [2016 - Present] \\
 		& - HackerRank, adventofcode, /r/dailyprogrammer (\C++, Java) \hfill [2017 - Present] \\
 		& $\;\;$ - Collections of competitive-style programming challenges \\
-		\iftoggle{outline}{\hline}{ & \\}
+		 & \\
 
 		% Section 3: Technical skills/proficiencies
 		\rowfont{\bfseries\large} Technical skills & Item - sorted by experience \\
-		\iftoggle{outline}{\hline}{}
+
 
 		% Section 3.1: Languages, Frameworks
 		\textbf{Language/Framework}
 		& \C++, Java, Python, Shell script, Ruby/Rails, PHP \\
-		\iftoggle{outline}{\hline}{ & \\}
+		& \\
 
 		% Section 3.2: Software Development
 		\textbf{Software Dev}
 		& SVN, Unix/Linux, Git, Markdown, Cucumber, RSpec, JUnit \\
-		\iftoggle{outline}{\hline}{ & \\}
-	\end{tabu} \end{center}
+		 \\
+	\end{tabu}
 
-
-	\begin{center}
-		% Section 4: References
-		{\large \textbf{References}}
-		\\
-		\begin{tabu} { l l l l }
-			\rowfont{\bfseries\large}Name & Relationship & Phone & Email \\
-			\hline
-			Fred Brown & Lecturer & (08) 8313 4481 & fred.brown@cs.adelaide.edu.au \\
-			Wanru (Kelly) Gao & Work (lab demonstrator) supervisor & (08) 8313 7611 & wanru.gao@adelaide.edu.au \\
-			Cheryl Pope & Work (lab demonstrator) supervisor & (08) 8313 5833 & cheryl@cs.adelaide.edu.au \\
-			\hline
-		\end{tabu}
-	\end{center}
+	\vspace*{\fill}
+	\centering
+	% Section 4: References
+	{\large \textbf{References}}
+	\\
+	\begin{tabu} { l l l l }
+		\rowfont{\bfseries\large}Name & Relationship & Phone & Email \\
+		\hline
+		Fred Brown & Lecturer & (08) 8313 4481 & fred.brown@cs.adelaide.edu.au \\
+		Wanru (Kelly) Gao & Work (lab demonstrator) supervisor & (08) 8313 7611 & wanru.gao@adelaide.edu.au \\
+		Cheryl Pope & Work (lab demonstrator) supervisor & (08) 8313 5833 & cheryl@cs.adelaide.edu.au \\
+		\hline
+	\end{tabu}
 
 \end{document}
