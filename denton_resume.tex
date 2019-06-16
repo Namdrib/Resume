@@ -18,43 +18,32 @@
 \usepackage{hyperref}
 \usepackage{fontawesome}
 
-% Definitions
-%c from texinfo.tex
-\def\ifmonospace{\ifdim\fontdimen3\font=0pt}
-
-%c C plus plus
-\def\C++{
-	\ifmonospace
-		C++
-	\else
-		C\kern-.1667em\raise.30ex\hbox{\smaller{++}}
-	\fi
-		\spacefactor1000
-}
-
 \def\C++{
 	C\texttt{++}
 }
 
 \begin{document}
-% Title information (name, date, etc. )
+	% Title information (name, date, etc. )
 	\centering % "Header" content (contact details)
 	{\LARGE \textbf{Denton Phosavanh}}
 
 	% Requires LuaLaTeX or XeLaTeX
-	\faMobilePhone\ +61 429 263 306\ \ \faInbox\ \href{mailto:dphosavanhau@gmail.com}{dphosavanhau@gmail.com}\ \ \faCalendar\ generated \today
+	\faMobilePhone\ +61 429 263 306\ \ \faInbox\ \href{mailto:dphosavanh@protonmail.com}{dphosavanh@protonmail.com}\ \ \faCalendar\ generated \today
+	\vspace{2pt}
 
 	\faLinkedinSign\ \href{https://www.linkedin.com/in/denton-phosavanh}{linkedin.com/in/denton-phosavanh}\ \ \faGithub\ \href{https://www.github.com/Namdrib}{github.com/Namdrib}
 	\hrule
 	\vspace{10pt}
 
-	% Possibly insert like a blurb or something in here
-
 	\centering
 	\begin{tabu} to \textwidth{p{0.2\linewidth}p{0.8\linewidth}}
 		% Section 0: Work experience
 		\rowfont{\bfseries\large} Work Experience & Description \hfill Date(s) \\
-		Casual teaching at the University of Adelaide & Supervise practical/workshops sessions of comp-sci courses \hfill [Jul 2017 - Nov 2017] \\
+		\multirow{1}{*}{\textbf{BAE Systems Australia}} & DFMS (Defence Formal Messaging System) \hfill [Feb 2019 - Aug 2019] \\
+		Graduate Software Engineer & - C\# / ASP.NET, Java, javascript, css \\
+		& \\
+		\textbf{University of Adelaide} & Supervise practical/workshops sessions of comp-sci courses \hfill [Jul 2017 - Nov 2017] \\
+		Casual Tutor & \\
 
 		& \\
 		% Section 1: Formal education
@@ -65,32 +54,32 @@
 		& The University of Adelaide, Australia \hfill GPA: 5.844 / 7 \\
 
 		& \\
-		% Section 2: Informal? education and other stuff
+		% Section 2: Informal bits
 		% Section 2.1: Personal projects
 		\multirow{1}{*}{\textbf{Personal Projects}}
-		& \textbf{GeniusScrape} (Python) \hfill [Nov 2016 - Feb 2017] \\
+		& \textbf{GeniusScrape} (Python) \hfill [Nov 2016] \\
 		& - Quick and painless lyrics retrieval from Genius.com \\
 		& - Uses the BeautifulSoup4 library to web scrape from Genius \\
 		& - Uses shell script for mediocre automated testing \\
 		& \\
-		& \textbf{crypto-arbitrage} (\C++, Python) \hfill [Dec 2017 - Ongoing] \\
+		& \textbf{crypto-arbitrage} (\C++, Python) \hfill [Dec 2017] \\
 		& - A program to detect arbitrage for various cryptocurrency sites \\
 		& - A future goal is to write a trading bot to act on the detections \\
 		& \\
-		& \textbf{Tic-Tac-Toe solver} (Java) \hfill [Jan 2018 - Ongoing] \\
+		& \textbf{Tic-Tac-Toe solver} (Java) \hfill [Jan 2018] \\
 		& - 3 computer types: random, minimax, alpha-beta \\
 		& - Human can play against human or computer in CLI \\
 		& - Incoming: GUI for players to click which move to make \\
 		& \\
-		& \textbf{NamBot} (Java) \hfill [Feb 2018 - Ongoing] \\
+		& \textbf{NamBot} (Java) \hfill [Feb 2018] \\
 		& - A somewhat general-purpose Discord (online chat client) bot \\
 		& - Uses the JDA wrapper for the Discord API \\
 		& - Arbitrarily extensible with the use of modules \\
 		& - Deployed on Heroku \\
 		& \\
-		& \textbf{Minesweeper} (Java) \hfill [July 2018 - Ongoing] \\
+		& \textbf{Minesweeper} (Java) \hfill [July 2018] \\
 		& - Java clone of Windows XP Minesweeper \\
-		& - Uses Java Swing to create the GUI \\
+		& - Java Swing for GUI work \\
 
 		& \\
 		% Section 2.3: Extracurricular activities
@@ -98,11 +87,9 @@
 		% Separated from ^ for modularity.
 		& \textbf{Programming skills practice (Language(s))} \\
 		& - Project Euler (\C++, Java, Python) \hfill [2016 - Present] \\
-		& $\;\;$ - A collection of mathematical problems made easier with computation \\
-		& - CodinGame (\C++, Java, Python) \hfill [2016 - Present] \\
-		& $\;\;$ - Online judge with preset and community problems \\
+		& $\;\;$ - Mathematical problems solved with computation \\
 		& - ACM ICPC Practice Rounds (ANZAC) (\C++) \hfill [2016 - 2018] \\
-		& - HackerRank, adventofcode, /r/dailyprogrammer (\C++, Java) \hfill [2017 - Present] \\
+		& - CodinGame, HackerRank, adventofcode, /r/dailyprogrammer (\C++, Java, Python) \hfill [2016 - Present] \\
 		& $\;\;$ - Collections of competitive-style programming challenges \\
 
 		& \\
@@ -111,12 +98,12 @@
 
 		% Section 3.1: Languages, Frameworks
 		\textbf{Language/Framework}
-		& \C++, Java, Python, Shell script, C\#, Ruby/Rails, PHP \\
+		& \C++, Java, Python, Shell script, C\#/ASP.NET, Ruby/Rails, PHP \\
 
 		& \\
 		% Section 3.2: Software Development
 		\textbf{Software Dev}
-		& Windows, Unix/Linux, Git, SVN, Markdown, LaTeX, JUnit, Cucumber, RSpec \\
+		& Windows, Unix-like, Git, SVN, Markdown, \LaTeX, JUnit, Cucumber, RSpec \\
 	\end{tabu}
 
 \end{document}
