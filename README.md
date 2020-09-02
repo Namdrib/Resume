@@ -1,4 +1,7 @@
 # Resume
 Source and pdf of resume
 
-Compile with XeLaTeX
+Compile with LuaLaTeX
+
+Requires FontAwesome
+
